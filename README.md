@@ -1,2 +1,13 @@
-# music-library
-Node express API to serve music library data
+# Music Library
+
+Node express API for serving songs and songs metadata
+
+## Prerequisites
+
+* node v10+
+
+## Getting started
+
+Install all the dependencies
+
+
