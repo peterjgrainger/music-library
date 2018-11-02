@@ -6,7 +6,11 @@
   "scripts": {
     "start": "nodemon --exec babel-node src/server.js",
     "build": "babel src --out-dir dist",
-    "serve": "node dist/server.js"
+    "serve": "node dist/server.js",
+    "test:unit": "jest --coverage src/**/*.test.js",
+    "test:end-to-end": "jest --coverage src/app.test.js",
+    "test": "npm run test:unit && npm run test:end-to-end",
+    "lint": "eslint src/**"
   },
   "repository": {
     "type": "git",
@@ -32,12 +36,18 @@
     "@babel/preset-env": "^7.1.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
+    "eslint": "^5.8.0",
     "jest": "^23.6.0",
     "nodemon": "^1.18.5",
     "regenerator-runtime": "^0.12.1",
     "supertest": "^3.3.0"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "aws-sdk": "^2.347.0",
+    "express": "^4.16.4",
+    "helmet": "^3.14.0",
+    "joi": "^14.0.3",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5"
   }
 }
