@@ -1,7 +1,7 @@
 
 
 /**
- * Retrieve the full music library from S3
+ * Get the metadata from Last FM
  * @param {any} req express request object
  * @param {any} res express response object
  * @param {Function} next Function to move to next middleware

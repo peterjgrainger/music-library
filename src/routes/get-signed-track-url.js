@@ -1,5 +1,5 @@
 /**
- * Retrieve the full music library from S3
+ * Get the signed URL from S3 for the track
  * @param {any} req express request object
  * @param {any} res express response object
  * @returns {Promise} promise to run S3 action.
