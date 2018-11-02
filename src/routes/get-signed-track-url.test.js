@@ -7,6 +7,9 @@ describe('src/routes/get-full-library', () => {
     };
 
     const req = {
+        config: {
+            S3_BUCKET: 'pg-music'
+        },
         params: {
             id: encodeURIComponent('Way Out West/We Love Machine/Ultra Violet.mp3')
         },
@@ -17,6 +20,6 @@ describe('src/routes/get-full-library', () => {
 
     it('should return a signed url', () => {
         trackUrl(req, res);
-        expect(res.send.mock.calls[0][0]).toBe('signedUrl');
+        expect(res.send.mock.calls[0][0]).toContain('signedUrl');
     });
 });

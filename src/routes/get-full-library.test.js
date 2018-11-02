@@ -7,6 +7,9 @@ describe('src/routes/get-full-library', () => {
     };
 
     const req = {
+        config: {
+            S3_BUCKET: 'pg-music'
+        },
         s3: {
             listObjects: () => ({
                 promise: () => Promise.resolve({

@@ -7,7 +7,7 @@
 function getSignedUrl (req, res) {
 
     const params = {
-        Bucket: 'pg-music',
+        Bucket: req.config.S3_BUCKET,
         Key: decodeURIComponent(req.params.id),
         Expires: 60 * 10
     };

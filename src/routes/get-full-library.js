@@ -8,7 +8,7 @@
 async function getFullLibrary (req, res, next) {
 
     const params = {
-        Bucket: 'pg-music'
+        Bucket: req.config.S3_BUCKET
     };
 
     try {
